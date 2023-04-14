@@ -3,7 +3,7 @@
 
 # Making this site
 
->GH [See this project on Github](https://github.com)
+>GH [See this project on Github](https://github.com/anthonyqsun/blog-snapshot/tree/main)
 
 Documenting my projects is something I've always wanted to do, both to serve as a personal knowledgebase and to start building a presence online. However, previous attempts usually just stopped at some HTML/CSS with a few hyperlinks and images. It's been a year since I've last touched such a project, and I've picked up many useful things along the way, so I decided to have another go at it while documenting my process to serve as motivation to actually complete it.
 

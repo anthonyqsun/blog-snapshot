@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Anthony Sun - Home</title>
+        <link rel="stylesheet" href="static/style.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+    <body class="nunito">
+        <script src="{{url_for('static', filename='script.js')}}"></script>
+        
+        <h1 class="maintitle">Anthony Sun</h1>
+        <h2 class="subtitle">Click to add description...</h2>
+        
+        <div class="directory">
+            <h3>Blog Posts</h3>
+            <div class="grid oneCol posts">
+
+
+                {% for post in posts %}
+                
+                <div class="grid twoCol postentry" onclick="redirect('{{post[0]}}')">
+                    <div class="grid oneCol">
+                        <h4 class="posttitle">{{post[0]}}</h4>
+                        <div class="flex taglist">
+                            {%for tag in post[1]%}
+                            <div class="tags" style='background-color: {{tag[1]}}' >{{tag[0]}}</div>
+                            {%endfor%}
+                        </div>
+                    </div>
+                    <div class="publishdate">
+                        {{post[2]}}
+                    </div>
+                </div>
+                {%endfor%}
+
+
+            </div>
+        </div>
+    </body>
+</html>
+
+
